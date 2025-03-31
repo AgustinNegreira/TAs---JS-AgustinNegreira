@@ -1,7 +1,11 @@
-function removeFromArray(texto) {
+function removeFromArray(texto, array) {
     const resultado = document.getElementById("resultado");
     
     resultado.innerHTML = "";
 
-    resultado.innerHTML =  texto.split("").reverse().join("");
+    const indice = array.indexOf(texto);
+
+    array.splice(indice, 1);
+
+    resultado.innerHTML = array;
 }
