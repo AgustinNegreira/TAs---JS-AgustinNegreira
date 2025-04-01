@@ -1,9 +1,9 @@
-function leapYear(anio) {
-    const resultado = document.getElementById("resultado");
+function convertToCelsius(temp) {
     
-    resultado.innerHTML = "";
+    document.getElementById("resultado").innerHTML = `${temp}°F → ${(temp - 32) * (5 / 9).toFixed(1)}°C`;
+}
 
-    let outcome = (anio % 4 === 0 && anio % 100 !== 0) || (anio % 400 === 0);
-
-    resultado.innerHTML = `¿El año ${anio} es bisiesto? -> ${outcome ? "Sí" : "No"}`;
+function convertToFarenheit(temp) {
+    
+    document.getElementById("resultado").innerHTML = `${temp}°C → ${((temp * 9 / 5) + 32).toFixed(1)}°F`;
 }
